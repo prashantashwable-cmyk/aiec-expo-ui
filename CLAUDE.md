@@ -11,6 +11,16 @@ that already cost time, and the decisions not to re-litigate.
 ## Source of truth
 - `docs/source/AIEC_App_Manual.md` — the product. Read by Part, never whole.
 - `docs/source/AIEC_BUILD_PROTOCOL.md` — how it gets built. Read at phase gates.
+- `docs/source/AIEC_App_Manual_Marathi.md` — full Marathi translation of the manual,
+  same part numbers and tables. English stays canonical for behaviour; use this
+  as the reference for Marathi terminology in `src/i18n/catalogues/mr.ts`.
+- `docs/source/AIEC_Screen_Bible.html` — per-screen visual spec: pixel foundation,
+  component library, every role's screens, handoff map, build order. Large —
+  read by section (`#p0`…`#p10`, `#comp`, `#handoff`, `#order`). The `.pdf` is the
+  same document for reading on a phone.
+  **The current 66 screens were built before this was added and do not follow it
+  yet.** Where it conflicts with the manual on product behaviour, the manual wins;
+  on visual and per-screen detail, the Screen Bible is the reference.
 
 ## Stack (decided, verified running)
 Expo SDK 57 · React Native 0.86 · React 19.2.3 · expo-router (file-based)

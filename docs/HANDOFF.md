@@ -72,7 +72,20 @@ Listed at the bottom of `docs/SCREENS.md`: A3, A6, A8, S6, P5, C2, C4, C9, T4,
 T7, T9, Q3, and R2 as a real camera flow. Their catalogue keys, nav entries and
 fixtures do not exist yet.
 
-### 3. Native map
+### 3. Align the UI with the Screen Bible
+
+`docs/source/AIEC_Screen_Bible.html` was added after the UI was built, so none of
+the 66 screens has been checked against it. Before building the missing screens
+in item 2, read its Pixel Foundation and Component Library sections and compare
+them with `src/design/` — token or component mismatches are cheaper to fix now
+than after another dozen screens copy the current pattern. The manual still
+wins on product behaviour; the Screen Bible governs visual and per-screen detail.
+
+Also: `src/i18n/catalogues/mr.ts` was translated without
+`docs/source/AIEC_App_Manual_Marathi.md`. Its terminology should be reconciled
+with the manual's Marathi so the app and the manual use the same words.
+
+### 4. Native map
 
 `map-shell.tsx` (native) is a deliberately schematic SVG with the same props and
 real lng/lat maths. Real native maps need `@maplibre/maplibre-react-native`,
@@ -132,3 +145,19 @@ grep -o '"text":"[^"]*MapLibre[^"]*' docs/history/transcripts/*.jsonl | head
 
 `docs/history/plans/ui-foundation-plan.md` is the approved plan the UI build
 started from.
+
+## Source documents
+
+| File | What it is |
+|---|---|
+| `docs/source/AIEC_App_Manual.md` | The product. Canonical. |
+| `docs/source/AIEC_BUILD_PROTOCOL.md` | How it gets built: immovables, phases, gates |
+| `docs/source/AIEC_App_Manual_Marathi.md` | Full Marathi translation of the manual |
+| `docs/source/AIEC_Screen_Bible.html` | Per-screen visual spec, all nine roles |
+| `docs/source/AIEC_Screen_Bible.pdf` | Same Screen Bible, for reading on a phone |
+
+The Screen Bible HTML is a cleaned copy of a page saved from a claude.ai
+artifact: the saved-from URL carrying a frame access token was removed, section
+links were rewritten from the dead sandbox address to in-page anchors, and the
+font stylesheet was inlined so it opens as a single file. The content itself is
+unchanged. The original lives only on the old Windows machine.
