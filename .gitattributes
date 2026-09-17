@@ -1,0 +1,5 @@
+# Stored and checked out as LF everywhere, so cloud (Linux) and local (Windows)
+# sessions never produce whole-file line-ending diffs.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
